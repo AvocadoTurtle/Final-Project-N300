@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNhKl3Tj5bdor5SR_-Pa2vJLhEpATPa7o">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: 39.7743, lng: -86.1764},
+          zoom: 14
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+<div id="map-canvas"></div>
+
+<div id="Runningbuttons">   
+     <a href=""><button>Start</button></a>
+<!-- will be turned into a button, that once clicked, starts the running function that progressively "pings" a users location and speed and temporarily stores it into an array? -->
+     <a href=""><button>Pause</button></a>
+<!-- Button, Pauses the process, like a system wait for input type thing -->
+
+     <a href="RunFinished.html"><button>Stop</button></a>
+<!-- Stops the entire process, button like the rest, and copies the data into another html file for storage, then takes the user to the next page -->
+</div>
+
+<div id="CenteredList">
+     <ul>
+       <li>Time:____</li>
+<!-- Once Start is pressed, this gets updated with the current time -->
+       <li>Distance:_____ Mi</li>
+<!-- Same as time, but in distance covered based on gps-->
+     </ul>
+</div>
+
+
+  </body>
+</html>

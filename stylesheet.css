@@ -1,0 +1,187 @@
+body {
+  background:gray; 
+}
+
+h1 {
+ color:Black;
+ text-align:center;
+ font-family: Helvetica; Arial, Comic Sans;
+}
+
+h2 {
+ color:Black;
+ text-align:center;
+ font-family: Helvetica; Arial, Comic Sans;
+}
+
+p{
+ color:Black;
+ text-align:center;
+ font-family: Arial, Helvetica, Comic Sans;
+ font-size: 1.1 em;
+}
+
+a{
+ text-decoration: none;
+ text-align: center;
+ font-family: Arial, Helvetica, Comic Sans;
+}
+
+a:link{
+ background-color: gray;
+}
+
+a:hover{
+ background-color: Yellow;
+}
+
+table, th, td{
+ border: 1px solid black;
+ background: white;
+ color: black;
+}
+
+table.center{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+#CenteredList ul{
+ text-align:center;
+ list-style:none;
+}
+
+#CenteredList li{
+ text-align:center;
+ list-style:none;
+}
+
+#Runningbuttons{
+ text-align:center;
+}
+
+#Finished{
+ text-align:center;
+}
+
+#Finished ul{
+ text-align:center;
+ list-style:none;
+}
+
+#Finished li{
+ text-align:center;
+ list-style:none;
+}
+
+#Logbutton{
+ text-align:center;
+}
+
+table.January{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.February{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.March{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.April{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.May{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.June{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.July{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.August{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.September{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.October{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.November{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+table.December{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+#January{
+ text-align:center;
+}
+
+#February{
+ text-align:center;
+}
+
+#March{
+ text-align:center;
+}
+
+#April{
+ text-align:center;
+}
+
+#May{
+ text-align:center;
+}
+
+#June{
+ text-align:center;
+}
+
+#July{
+ text-align:center;
+}
+
+#August{
+ text-align:center;
+}
+
+#September{
+ text-align:center;
+}
+
+#October{
+ text-align:center;
+}
+
+#November{
+ text-align:center;
+}
+
+#December{
+ text-align:center;
+}
