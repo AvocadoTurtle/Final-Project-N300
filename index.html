@@ -2,19 +2,29 @@
 <html>
     <head>
     <link rel="stylesheet" href="stylesheet.css"/>
-    [javascript, xml]
     <title>Simple Running(app)</title>
     </head>
 <body>
-    <h1> TITLE IN PROGRESS </h1>
-
+    <h1> RunTracker </h1>
+        
+        <script>
+	  function Exit(){
+	    navigator.app.exitApp();
+          }
+        </script>
+	
+	<br></br>
+	
        <p>
           <a href="Running.html"><button>Running!</button></a>
           <a href="Records.html"><button>Log</button></a>
           <a href="Settings.html"><button>Settings</button></a>
 
-          <a href="break"><button>Exit</button></a>
+          <button onclick="Exit()">Exit</button>
        </p>
 
+
+
+       <p id="Version"> Version .8</p>
 </body>
 </html>

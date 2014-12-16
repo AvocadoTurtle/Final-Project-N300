@@ -1,5 +1,5 @@
 body {
-  background:gray; 
+  background:blue; 
 }
 
 h1 {
@@ -184,4 +184,10 @@ table.December{
 
 #December{
  text-align:center;
+}
+
+#Version{
+ Color: Green;
+ font-size:12px;
+ font-family:comic Sans;
 }

@@ -5,9 +5,19 @@
     <style type="text/css">
       html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
     </style>
-    <script type="text/javascript"
+	
+	<!-- <script type="text/javascript" src="cordova-1.7.0.js"></script> -->
+    <script type="text/javascript" src="json2.js"></script>
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.4.5.min.js"></script>
+	
+	
+	
+	<!-- Google MAPS API STUFF -->
+	<script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNhKl3Tj5bdor5SR_-Pa2vJLhEpATPa7o">
     </script>
+	
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
@@ -19,25 +29,75 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+	
+	<script>
+	  var watch_id = null; //ID of geolocation
+	  var LatLong_data= []; //Stores GPS cords into an array
+	</script>
+	
+	<script>
+	  $("#Runbegin").live('click', function(){
+	    <!-- begins tracking user -->
+		watch_id = navigator.geolocation.watchPosition(
+		
+		<!-- runs on success -->
+		function(position){
+		    LatLong_data.push(position);
+		},
+	    
+		<!-- runs on failure -->
+	    function(error){
+		    console.log(error);
+		},
+	  
+	    <!-- settings -->
+	    {frequency: 3000, enableHighAccuracy: true});
+	  });
+	  
+	</script>
+	
+	<!-- When the Run ends-->
+	<script>
+	  $("#RunEnded").live('click', function(){
+	  
+	    <!-- Stops Tracking User -->
+		navigator.geolocation.clearWatch(watch_id);
+		
+		<!-- Saves Data to Phone -->
+		window.localStorage.setItem(LatLong_data, JSON.stringify(LatLong_data));
+		
+		<!-- Reset Watch_id and LatLong_data -->
+		var watch_id = null;
+	    var LatLong_data = null;
+	  });
+	</script>
+	
+    	
+	<script> 
+	//Says ERR_CONNECTION_REFUSED on my end of the spectre
+	$.get("http://localhost/RunFinished.html")
+	</script>
+	
   </head>
   <body>
 <div id="map-canvas"></div>
 
 <div id="Runningbuttons">   
-     <a href=""><button>Start</button></a>
+     <button id="Runbegin" >Start</button>
 <!-- will be turned into a button, that once clicked, starts the running function that progressively "pings" a users location and speed and temporarily stores it into an array? -->
-     <a href=""><button>Pause</button></a>
-<!-- Button, Pauses the process, like a system wait for input type thing -->
+     
+	 <button id="NextPage">End</button>
+<!-- Had trouble using the stop button, conflicting syntax or something weird, where it could not load -->
 
-     <a href="RunFinished.html"><button>Stop</button></a>
+     <button id="RunEnded">StopRun</button>
 <!-- Stops the entire process, button like the rest, and copies the data into another html file for storage, then takes the user to the next page -->
 </div>
 
 <div id="CenteredList">
      <ul>
-       <li>Time:____</li>
+       <li>Time:"Coming Soon"</li>
 <!-- Once Start is pressed, this gets updated with the current time -->
-       <li>Distance:_____ Mi</li>
+       <li>Distance:"Coming Soon"Mi</li>
 <!-- Same as time, but in distance covered based on gps-->
      </ul>
 </div>

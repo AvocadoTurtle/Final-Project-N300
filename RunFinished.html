@@ -12,8 +12,25 @@
 	<!-- need a function that calls the data stored from the previous page, Running. and places it in the ___ as well as in the Log section -->
     <div id="Finished">
         <ul>
-          <li>Distance:_____ Mi</li>
-          <li>Time:_____</li>
+          <p>Total Distance:<button onclick="Testfunction()">ClickMe</button></p>
+	  <p>Total Time:<button onclick="Testfunction2()">ClickMe</button></p>
+
+<br></br>
+
+<!-- Currently using a randomizer function to display dates -->
+<script>
+function Testfunction(){
+  var Miles = Math.floor((Math.random() * 10) + 1);
+  alert(Miles + "Mi")
+}
+</script>
+
+<script>
+function Testfunction2(){
+  var Time = (Math.floor((Math.random() * 400) + 1)%60);
+  alert(Time + "Minutes")
+}
+</script>
         </ul>
 
         <a href="index.html"><button>Menu</button></a>        

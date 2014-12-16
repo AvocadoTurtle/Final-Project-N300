@@ -11,12 +11,37 @@
 
 <!-- loads a summation of each days distance and time and outputs it-->
 
-<p>Total Distance:___ Mi</p>
-<p>Total Time:___</p>
+<p>Total Distance:<button onclick="Testfunction()">ClickMe</button></p>
+<p>Total Time:<button onclick="Testfunction2()">ClickMe</button></p>
 
 <br></br>
 
 <h2> June </h2>
+
+<!-- Currently using a randomizer function to display dates -->
+<script>
+function Testfunction(){
+  var Miles = Math.floor((Math.random() * 200) + 1);
+  alert(Miles + "Mi")
+}
+</script>
+
+<script>
+function Testfunction2(){
+  var Time = (Math.floor((Math.random() * 200) + 1)%60);
+  alert(Time + "Hrs")
+}
+</script>
+
+<!-- Currrently using a randomizer functio to display dates, storage to be built in -->
+
+<script>
+function StorageFunction(){
+    var Distcovrd = Math.floor((Math.random() * 100) + 1);
+	var Timecovrd = (Math.floor((Math.random() * 100) + 1)%60);
+	alert("Distance(Mi): " + Distcovrd + "\nTime(Hrs): " + Timecovrd)
+}
+</script>
 
 <table class="June">
 
@@ -24,44 +49,44 @@
 
 </tr>
 <tr>
- <td>1</td>
- <td>2</td>
- <td>3</td>
- <td>4</td>
- <td>5</td>
- <td>6</td>
- <td>7</td>
+ <td><button onclick="StorageFunction()">1</button></td>
+ <td><button onclick="StorageFunction()">2</button></td>
+ <td><button onclick="StorageFunction()">3</button></td>
+ <td><button onclick="StorageFunction()">4</button></td>
+ <td><button onclick="StorageFunction()">5</button></td>
+ <td><button onclick="StorageFunction()">6</button></td>
+ <td><button onclick="StorageFunction()">7</button></td>
 </tr>
 <tr>
- <td>8</td>
- <td>9</td>
- <td>10</td>
- <td>11</td>
- <td>12</td>
- <td>13</td>
- <td>14</td>
+ <td><button onclick="StorageFunction()">8</button></td>
+ <td><button onclick="StorageFunction()">9</button></td>
+ <td><button onclick="StorageFunction()">10</button></td>
+ <td><button onclick="StorageFunction()">11</button></td>
+ <td><button onclick="StorageFunction()">12</button></td>
+ <td><button onclick="StorageFunction()">13</button></td>
+ <td><button onclick="StorageFunction()">14</button></td>
 </tr>
 <tr>
-<td>15</td>
- <td>16</td>
- <td>17</td>
- <td>18</td>
- <td>19</td>
- <td>20</td>
- <td>21</td>
+ <td><button onclick="StorageFunction()">15</button></td>
+ <td><button onclick="StorageFunction()">16</button></td>
+ <td><button onclick="StorageFunction()">17</button></td>
+ <td><button onclick="StorageFunction()">18</button></td>
+ <td><button onclick="StorageFunction()">19</button></td>
+ <td><button onclick="StorageFunction()">20</button></td>
+ <td><button onclick="StorageFunction()">21</button></td>
 </tr>
 <tr>
-<td>22</td>
- <td>23</td>
- <td>24</td>
- <td>25</td>
- <td>26</td>
- <td>27</td>
- <td>28</td>
+ <td><button onclick="StorageFunction()">22</button></td>
+ <td><button onclick="StorageFunction()">23</button></td>
+ <td><button onclick="StorageFunction()">24</button></td>
+ <td><button onclick="StorageFunction()">25</button></td>
+ <td><button onclick="StorageFunction()">26</button></td>
+ <td><button onclick="StorageFunction()">27</button></td>
+ <td><button onclick="StorageFunction()">28</button></td>
 </tr>
 <tr>
-<td>29</td>
- <td>30</td>
+ <td><button onclick="StorageFunction()">29</button></td>
+ <td><button onclick="StorageFunction()">30</button></td>
  <td>--</td>
  <td>--</td>
  <td>--</td>
